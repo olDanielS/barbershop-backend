@@ -53,7 +53,7 @@ model Haircut {
   updated_at DateTime? @default(now())
 
   @@map("haircuts")
-  userId     String    @unique
+  userId     String  
   user       User      @relation(fields: [userId], references: [id])
 
   service Service[]
